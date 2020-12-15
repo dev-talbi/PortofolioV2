@@ -1,0 +1,41 @@
+.banner{
+    background-image: url(https://zupimages.net/up/20/50/djii.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+
+}
+
+.text-banner{
+    color: white;
+    text-align: center;
+    padding-top: 25%;
+    text-shadow: 1px 1px #000;
+
+}
+
+.rounded-circle{
+    width: 200px;
+    height: 200px;
+}
+
+.container-project{
+    display: inline;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    outline: black;
+    background-color: rgba(255, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.container-round{
+    margin-top: 5%;
+}
+
+.title{
+    margin-bottom: 5%;
+}
+

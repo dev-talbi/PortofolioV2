@@ -14,23 +14,39 @@ class PortofolioContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title',TextType::class, [
-                'disabled' => true,
+            ->add('firstname',TextType::class, [
+                'label' => 'Nom',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'input100',
+                    'placeholder' => 'votre nom' 
                 ]
+
+            ])
+            ->add('lastname',TextType::class, [
+                'label' => 'Prenom',
+                'attr' => [
+                    'class' => 'input100',
+                    'placeholder' => 'votre prenom' 
+                ]
+
             ])
             ->add ('email',EmailType::class, [
                 'label' => 'Votre e-mail',
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'input100',
+                    'placeholder' => 'votre e-mail' 
                 ]
             ])
             ->add ('message', CKEditorType::class, [
                 'label' => 'Votre message',
+                'attr'=> [
+                    'class' => 'input100',
+                    'placeholder' => 'votre message' 
+                ]
             ])
         ;
     }
+
 
     public function configureOptions(OptionsResolver $resolver)
     {

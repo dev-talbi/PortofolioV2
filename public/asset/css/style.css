@@ -24,6 +24,10 @@
     margin-top: 1%;
 }
 
+.contact{
+  margin-top: 100px;
+}
+
 /*Button*/
 
   
@@ -43,6 +47,9 @@
     transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
 
   }
+
+  
+  
   .bubbly-button:focus {
     outline: 0;
   }

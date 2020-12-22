@@ -208,7 +208,18 @@
 			</div>
 		</div>
 	</div>
+
+
 	{% endfor %}
+	<div class="container">
+		{{ form_start(form) }}
+		{{ form_widget(form.title) }}
+		{{ form_row(form.email) }}
+		{{ form_row(form.message) }}
+
+		<button>Envoyer</button>
+		{{ form_end(form) }}
+	</div>
 
 
 

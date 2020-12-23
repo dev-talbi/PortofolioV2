@@ -3,14 +3,15 @@
 namespace App\Controller;
 
 use App\Entity\Design;
+use App\Entity\Techno;
 use App\Entity\Project;
 use App\Form\PortofolioContactType;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Mailer\MailerInterface;
 
 class HomeController extends AbstractController
 {
@@ -21,9 +22,9 @@ class HomeController extends AbstractController
     {
         $repoProject = $this->getDoctrine()->getRepository(Project::class);
         $projects = $repoProject->findAll();
+        $designs = $this->getDoctrine()->getRepository(Design::class)->findAll();
+        $technos = $this->getDoctrine()->getRepository(Techno::class)->findAll();
 
-        $designs = $this->getDoctrine()->getRepository(Design::class)
-        ->findAll();
 
         $form = $this->createForm(PortofolioContactType::class);
         $contact = $form->handleRequest($request);
@@ -47,6 +48,7 @@ class HomeController extends AbstractController
             'controller_name' => 'ProjectController',
             'projects' => $projects,
             'designs'=> $designs,
+            'thecnos'=> $technos,
             'form' => $form->createView() 
         ]);
     }

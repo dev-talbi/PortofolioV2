@@ -11,6 +11,32 @@
     text-align: center;
     padding-top: 25%;
     text-shadow: 1px 1px #000;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+.title{
+  font-family: 'Work Sans', sans-serif;
+  
+}
+
+.first{
+  margin-top: 3%;
+}
+
+.second{
+  margin-top: 8%;
+  
+}
+
+
+.third{
+  margin-top: 8%;
+
+}
+
+.four{
+  margin-top: 8%;
 
 }
 
@@ -24,8 +50,27 @@
     margin-top: 1%;
 }
 
+.modal-text{
+  text-align: left;
+}
+.techno{
+  margin: auto;
+  font-size: 25px;
+}
+
+.link{
+  margin: auto;
+}
+
 .contact{
   margin-top: 100px;
+}
+
+.btn-card{
+  margin-top: 10% ;
+}
+.title-card{
+  margin-bottom: 3%;
 }
 
 /*Button*/
@@ -115,3 +160,9 @@
     }
   }
   
+
+  @media (max-width: 600px) {
+    .picture-me {
+      display: none;
+    }
+  }

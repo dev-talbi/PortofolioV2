@@ -6,42 +6,28 @@
 {% endblock %}
 
 {% block body %}
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
+<div class="container-fluid container-banner" style="background-image: url('https://zupimages.net/up/20/50/djii.png')">
+	<div class="row" >
+		<div class="col-md-12 banner">
+			<div class="banner-text">
+				<h1 class="title-banner">Bienvenue sur mon portofolio</h1>
+			</div>
 		</div>
 	</div>
 </div>
 <section>
 	<div class="container-fluid">
 		<section>
-			<div class="col-md-12 banner">
-				<h1 class="text-banner">Bienvenue sur mon portofolio</h1>
-			</div>
 			<div class="row first">
-				<div class="col-md-6 col-sm 12 container">
+				<div class="container col-lg-12 col-md-3 col-sm-3 container-card">
 					<h1 class="title">À propos de moi </h1>
 					<p> <i class="fas fa-arrow-right"></i> Actuellement en reconversion professionnel dans le  développement web,  je recherche un stage de 4 à 6 mois.
-
-						Dans un premier temps pour  perfectionner mes compétences et par la suite passer le RNCP développeur web. 
-						
+						Dans un premier temps pour  perfectionner mes compétences et par la suite passer le RNCP développeur web. 	
 						Ma motivation et ma soif de connaissance seront à coup sûr, un atout pour réaliser mes projets et apporter une plus value à votre entreprise.
 					</p>
-				</div>
-				<div class="col-md-6">
-					<div class="row ">
-						<div class="col-md-12 text-center container-round ">
-							<img class="picture" src="https://fakeimg.pl/300x300/"
-								alt="[ABC Tech posssède 75% de part de marché et XYZ 25%]" />
-							<img src="https://fakeimg.pl/300x300/"
-								alt="[ABC Tech posssède 75% de part de marché et XYZ 25%]" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<img src="https://fakeimg.pl/604x200/"
-								alt="[ABC Tech posssède 75% de part de marché et XYZ 25%]" />
-						</div>
+					<div class=" text-center container-round  ">
+						<img class="picture" src="https://fakeimg.pl/300x300/"
+							alt="[ABC Tech posssède 75% de part de marché et XYZ 25%]" />
 					</div>
 				</div>
 			</div>
@@ -53,13 +39,17 @@
 	<h1 class="title title-card">Mes projets</h1>
 	<div class="row d-flex justify-content-center ">
 		{% for project in projects %}
-		<div class="card" style="width: 18rem;">
-			<img class="card-img-top img" src="{{ project.img[0].url }}" alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">{{ project.name }}</h5>
-				<p class="card-text">{% autoescape false %} {{ project.description|striptags|u.truncate(50, ' ...') }} {% endautoescape %}</p>
-				<button type="button" class="bubbly-button btn-card" data-toggle="modal" data-target="#modal-{{project.id}}">En
-					savoir plus</button>
+		<div class="col-lg-3 col-md-6 col-sm-12 container-card">
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top img" src="{{ project.img[0].url }}" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">{{ project.name }}</h5>
+					<p class="card-text">{% autoescape false %} {{ project.description|striptags|u.truncate(50, ' ...') }} {%
+						endautoescape %}</p>
+					<button type="button" class="bubbly-button btn-card" data-toggle="modal"
+						data-target="#modal-{{project.id}}">En
+						savoir plus</button>
+				</div>
 			</div>
 		</div>
 		<div class="modal fade" id="modal-{{project.id}}" tabindex="-1" aria-labelledby="modal-{{project.id}}"

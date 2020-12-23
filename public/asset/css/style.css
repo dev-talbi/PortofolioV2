@@ -1,9 +1,11 @@
-.banner{
-    background-image: url(https://zupimages.net/up/20/50/djii.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 900px;
-
+.container-banner{
+  height: 600px;
+  background:fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .text-banner{
@@ -45,8 +47,17 @@
     height: 180px;
 }
 
+.container-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+}
+
 .card{
-    margin-left: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 1%;
 }
 
@@ -160,9 +171,3 @@
     }
   }
   
-
-  @media (max-width: 600px) {
-    .picture-me {
-      display: none;
-    }
-  }

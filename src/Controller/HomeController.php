@@ -28,28 +28,30 @@ class HomeController extends AbstractController
 
         $form = $this->createForm(PortofolioContactType::class);
         $contact = $form->handleRequest($request);
-        if($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
             $email = (new TemplatedEmail())
                 ->from($contact->get('email')->getData())
                 ->to('talbiabdeljallil@yahoo.fr')
                 ->subject('portofolio')
                 ->htmlTemplate('emails/contact.html.twig')
                 ->context([
-                    'mail'=>$contact->get('email')->getData(),
-                    'message'=>$contact->get('message')->getData()
+                    'mail' => $contact->get('email')->getData(),
+                    'message' => $contact->get('message')->getData(),
+                    'firstname' => $contact->get('firstname')->getData(),
+                    'lastname' => $contact->get('lastname')->getData()
 
                 ]);
-                $mailer->send($email);
-                $this->addFlash('message', 'Mail de contact envoyé !');
-                return $this->redirectToRoute('home');
+            $mailer->send($email);
+            $this->addFlash('message', 'Mail de contact envoyé !');
+            return $this->redirectToRoute('home');
         }
-        
+
         return $this->render('home/index.html.twig', [
             'controller_name' => 'ProjectController',
             'projects' => $projects,
-            'designs'=> $designs,
-            'thecnos'=> $technos,
-            'form' => $form->createView() 
+            'designs' => $designs,
+            'thecnos' => $technos,
+            'form' => $form->createView()
         ]);
     }
 }

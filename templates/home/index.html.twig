@@ -6,67 +6,58 @@
 {% endblock %}
 
 {% block body %}
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-
+<div class="container-fluid container-banner" style="background-image: url('https://zupimages.net/up/20/50/djii.png')">
+	<div class="row" >
+		<div class="col-md-12 banner">
+			<div class="banner-text">
+				<h1 class="title-banner">Bienvenue sur mon portofolio</h1>
+			</div>
 		</div>
 	</div>
 </div>
 <section>
-	<div class="container-fluid">
-		<section>
-			<div class="col-md-12 banner">
-				<h1 class="text-banner">bienvenue sur mon Portofolio</h1>
-			</div>
-			<div class="row">
-				<div class="col-md-6 container-round ">
-					<h1>about me</h1>
-					<p> <i class="fas fa-arrow-right"></i>Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-						1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-						book. It has survived not only five centuries, but also the leap into electronic typesetting,
-						remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-						sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-						Aldus PageMaker including versions of Lorem Ipsum.</p>
-				</div>
+	<div class="container contain-about">
+		<div class="row">
+			<div class="col-lg6 col-md-6 col-sm-12 ">
+				<h1 class="title-about">
+					À propos de moi 
+				</h1>
+				<p>
+					Actuellement en reconversion professionnel dans le  développement web,  je recherche un stage de 4 à 6 mois.
 
-				<div class="col-md-6">
-					<div class="row">
-						<div class="col-md-12 text-center container-round">
-							<img src="https://fakeimg.pl/300x300/"
-								alt="[ABC Tech posssède 75% de part de marché et XYZ 25%]" />
-							<img src="https://fakeimg.pl/300x300/"
-								alt="[ABC Tech posssède 75% de part de marché et XYZ 25%]" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<img src="https://fakeimg.pl/604x200/"
-								alt="[ABC Tech posssède 75% de part de marché et XYZ 25%]" />
-						</div>
-					</div>
-				</div>
-			</div>
-	</div>
-	</div>
-	</div>
-</section>
-<div class="container-fluid text-center ">
-	<h1>Mes projets</h1>
-	<div class="row d-flex justify-content-center">
+					Dans un premier temps pour  perfectionner mes compétences et par la suite passer le RNCP développeur web. 
 
-		{% for project in projects %}
-		<div class="card" style="width: 18rem;">
-			<img class="card-img-top img" src="{{ project.img[0].url }}" alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">{{ project.name }}</h5>
-				<p class="card-text">{{ project.description }}</p>
-				<button type="button" class="bubbly-button" data-toggle="modal" data-target="#modal-{{project.id}}">En
-					savoir plus</button>
+					Ma motivation et ma soif de connaissance seront à coup sûr, un atout pour réaliser mes projets et apporter une plus value à votre entreprise.
+				</p>
+				
+			</div>
+			<div class="col-lg6 col-md-6 col-sm-12 row-about ">
+				<img src="https://dummyimage.com/300x300/000/fff" alt="#" />
+
 			</div>
 		</div>
 
+	</div>
+
+
+</section>
+<div class="container-fluid text-center second ">
+	<h1 class="title title-card">Mes projets</h1>
+	<div class="row d-flex justify-content-center ">
+		{% for project in projects %}
+		<div class="col-lg-3 col-md-6 col-sm-12 container-card">
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top img" src="{{ project.img[0].url }}" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">{{ project.name }}</h5>
+					<p class="card-text">{% autoescape false %} {{ project.description|striptags|u.truncate(50, ' ...') }} {%
+						endautoescape %}</p>
+					<button type="button" class="bubbly-button btn-card" data-toggle="modal"
+						data-target="#modal-{{project.id}}">En
+						savoir plus</button>
+				</div>
+			</div>
+		</div>
 		<div class="modal fade" id="modal-{{project.id}}" tabindex="-1" aria-labelledby="modal-{{project.id}}"
 			aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -101,21 +92,23 @@
 								<span class="sr-only">Next</span>
 							</a>
 						</div>
-
 						{% else %}
 						<img src="{{ project.img[0].url}}" alt="{{project.name}}" class="d-block w-100">
-
 						{% endif %}
-
 					</div>
 					<div class="modal-header">
-						<h5 class="modal-title">{{ project.name }}</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
+						<h3 class="modal-title">{{ project.name }}</h3>
 					</div>
 					<div class="modal-body">
-						<p>{{ project.description }}</p>
+						<p class="modal-text">{% autoescape false %} {{ project.description|striptags }} {% endautoescape %}</p>
+					</div>
+					<div class="modal-footer">
+						<p class="techno">{{ project.techno[0].imgUrl|raw}}</p>
+					</div>
+					<div class="modal-footer" >
+						<a class="link" href="{{project.url}}" target="_blank"><i class="fas fa-link"></i> Lien du site</a>
+						<a class="link" href="{{project.repositoryGit}}" target="_blank"><i class="fas fa-link"></i> Lien Github</a>
+						<!--<a href="">Maquette</a>-->
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary read-more" data-dismiss="modal">Fermer</button>
@@ -125,25 +118,21 @@
 		</div>
 		{% endfor %}
 	</div>
-
-
-	<div class="container-fluid text-center ">
-		<h1>Mes design</h1>
+</div>
+	<div class="container-fluid text-center third">
+		<h1 class="title title-card">Mes design</h1>
 		<div class="row d-flex justify-content-center">
-
 			{% for design in designs %}
 			<div class="card" style="width: 18rem;">
 				<img class="card-img-top img" src="{{ design.img[0].url }}" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">{{ design.name }}</h5>
-					<p class="card-text">{{ design.description }}</p>
-					<button type="button" class="bubbly-button" data-toggle="modal"
+					<p class="card-text">{% autoescape false %} {{ design.description|striptags|u.truncate(50, ' ...') }} {% endautoescape %}</p>
+					<button type="button" class="bubbly-button btn-card" data-toggle="modal"
 						data-target="#modal-{{design.id}}">En
 						savoir plus</button>
 				</div>
 			</div>
-
-
 			<div class="modal fade" id="modal-{{design.id}}" tabindex="-1" aria-labelledby="modal-{{design.id}}"
 				aria-hidden="true">
 				<div class="modal-dialog" role="document">
@@ -187,33 +176,29 @@
 						</div>
 						<div class="modal-header">
 							<h5 class="modal-title">{{ design.name }}</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
 						</div>
 						<div class="modal-body">
-							<p>{{ design.description }}</p>
+							<p>{% autoescape false %} {{ design.description|striptags }} {% endautoescape %}</p>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary read-more"
 								data-dismiss="modal">Fermer</button>
 						</div>
+						<div class="modal-footer">
+							<a href="{{design.urlAdobe}}" target="_blank">Maquette</a>
+
+						</div>
 					</div>
 				</div>
 			</div>
-		
-
-
 			{% endfor %}
 		</div>
-
-			<div class="container-fluid">
+			<div class="container-fluid four">
 				{% for message in app.flashes('message') %}
 				<div class="alert alert-success" role="alert">
 					{{ message }}
 				</div>
 				{% endfor %}
-
 				<div class="bg-contact100" style="background-image: url('images/bg-01.jpg');">
 					<div class="container-contact100">
 						<div class="wrap-contact100">
@@ -242,7 +227,6 @@
 									<i class="fa fa-user" aria-hidden="true"></i>
 								</span>
 							</div>
-
 							<div class="wrap-input100 validate-input"
 								data-validate="Valid email is required: ex@abc.xyz">
 								{{ form_row(form.email) }}
@@ -251,28 +235,20 @@
 									<i class="fa fa-envelope" aria-hidden="true"></i>
 								</span>
 							</div>
-
 							<div class="wrap-input100 validate-input" data-validate="Message is required">
 								{{ form_row(form.message) }}
 								<span class="focus-input100"></span>
 							</div>
-
 							<div class="container-contact100-form-btn">
 								<button class="bubbly-button">
 									Envoyer
 								</button>
-
 							</div>
 							{{ form_end(form) }}
 						</div>
 					</div>
 				</div>
-
 			</div>
-
 		</div>
-
 	</div>
-
-
 {% endblock %}

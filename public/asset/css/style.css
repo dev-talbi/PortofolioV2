@@ -8,15 +8,48 @@
   justify-content: center
 }
 
-.text-banner{
-    color: white;
-    text-align: center;
-    padding-top: 25%;
-    text-shadow: 1px 1px #000;
-    font-family: 'Work Sans', sans-serif;
-
+.title-banner{
+  font-size: 60px;
+  color: white;
+  text-shadow: 0px 3px 6px #00000029;
+  font-family: 'Work Sans', sans-serif;
+}
+.test{
+  text-align: center;
+  margin-top: 3%;
 }
 
+.btn-linkedin{
+  color: white;
+  background-color: #19649b;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.btn-github{
+  margin-left: 3%;
+  color: #fff;
+  background-color: #14191d;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.btn-text{
+  color: white;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif; 
+  font-size: 18px;
+  
+}
+.fa-linkedin{
+    color: white;
+    font-size: 20px;
+
+}
+.fa-github{
+  color: #fff;
+  font-size: 20px;
+}
 .title{
   font-family: 'Work Sans', sans-serif;
   
@@ -80,10 +113,12 @@
 .modal-text{
   text-align: left;
 }
-.techno{
-  margin: auto;
+.icon-tech{
+    margin: auto;
   font-size: 25px;
+
 }
+
 
 .link{
   margin: auto;
@@ -99,7 +134,38 @@
 .title-card{
   margin-bottom: 3%;
 }
+/*Techno*/
+.fa-html5{
+  color: #ED730E;
+}
 
+.fa-css3-alt{
+  color: #0485E0;
+
+}
+
+.fa-php{
+  color: #678BE0;
+
+}
+
+.fa-js-square{
+  color: #f7df1d;
+  
+}
+
+.fa-bootstrap{
+  color: #563d7c;
+
+}
+.fa-symfony{
+  color: black;
+
+}
+.fa-react{
+  color: #61dbfb;
+
+}
 /*Button*/
 
   

@@ -12,6 +12,14 @@
 			<div class="banner-text">
 				<h1 class="title-banner">Bienvenue sur mon portofolio</h1>
 			</div>
+			<div class="test">
+				<a href="https://www.linkedin.com/in/abdeljalil-talbi-454533b2/" target="_blank" class="btn-linkedin">
+					<span class="fa fa-linkedin"></span> <span class="btn-text">Linkedin</span>
+				</a>
+				<a href="https://github.com/dev-talbi" target="_blank" class=" btn-github">
+					<span class="fa fa-github"></span> <span class="btn-text">Github</span>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -109,7 +117,7 @@
 					</div>
 					<div class="modal-footer">
 						{% for i in 0..project.techno|length-1 %}
-						{{project.techno[i].imgUrl|raw}}
+						<p class="icon-tech">{{project.techno[i].imgUrl|raw}}</p>
 						{% endfor %}
 					</div>
 					<div class="modal-footer">
@@ -191,11 +199,10 @@
 						<p>{% autoescape false %} {{ design.description|striptags }} {% endautoescape %}</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary read-more" data-dismiss="modal">Fermer</button>
+						<a href="{{design.urlAdobe}}" target="_blank"><i class="fas fa-link"></i>Lien de la maquette</a>
 					</div>
 					<div class="modal-footer">
-						<a href="{{design.urlAdobe}}" target="_blank">Maquette</a>
-
+						<button type="button" class="btn btn-secondary read-more" data-dismiss="modal">Fermer</button>
 					</div>
 				</div>
 			</div>

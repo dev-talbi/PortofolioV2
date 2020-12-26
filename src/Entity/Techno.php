@@ -48,6 +48,7 @@ class Techno
     public function __toString()
     {
         return $this->name;
+        return $this->imgUrl;
     }
 
     public function getId(): ?int

@@ -108,7 +108,9 @@
 							endautoescape %}</p>
 					</div>
 					<div class="modal-footer">
-						<p class="techno">{{ project.techno[0].imgUrl|raw}}</p>
+						{% for i in 0..project.techno|length-1 %}
+						{{project.techno[i].imgUrl|raw}}
+						{% endfor %}
 					</div>
 					<div class="modal-footer">
 						<a class="link" href="{{project.url}}" target="_blank"><i class="fas fa-link"></i> Lien du

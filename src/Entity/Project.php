@@ -62,6 +62,7 @@ class Project
 
     public function __toString()
     {
+        return $this->techno;
         return $this->name;
         return $this->img;
     }
@@ -184,6 +185,4 @@ class Project
 
         return $this;
     }
-
-
 }

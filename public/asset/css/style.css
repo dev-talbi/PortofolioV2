@@ -1,0 +1,328 @@
+
+/*navbar*/
+
+.container-nav{
+  background-color:transparent;
+  position: absolute;
+  right:  0;
+}
+.nav-link{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+
+}
+
+:hover.nav-link{
+  color: #FF8908 ;;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+
+}
+
+.space{
+    margin-right: 80px;
+
+}
+
+
+.container-banner{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: left
+  
+}
+
+.title-banner{
+  font-size: 60px;
+  color: white;
+  text-shadow: 0px 3px 6px #00000029;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.name{
+  color: #FF8908 ;
+}
+.container-button{
+  text-align: center;
+  margin-top: 3%;
+}
+
+.btn-linkedin{
+  color: white;
+  background-color: #19649b;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.btn-github{
+  margin-left: 3%;
+  color: #fff;
+  background-color: #14191d;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.btn-cv{
+  margin-left: 3%;
+  color: #fff;
+  background-color: #FF8908 ;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.container-button .btn-github:hover {
+  background-color: #2f363b;
+}
+.container-button .btn-linkedin:hover {
+  background-color: #1f7abb;
+}
+.container-button .btn-cv:hover {
+  background-color: #f5952f;
+}
+.fa-download{
+  color: #fff;
+}
+
+.fa-download:hover{
+  color: #fff;
+
+}
+.btn-text{
+  color: white;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif; 
+  font-size: 18px;
+  
+}
+.fa-linkedin{
+    color: white;
+    font-size: 20px;
+
+}
+.fa-github{
+  color: #fff;
+  font-size: 20px;
+}
+.title{
+  font-family: 'Work Sans', sans-serif;
+  
+}
+.title-about{
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FF8908 ;
+}
+.contain-about{
+  margin-top: 3%;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 15px;
+  padding: 20px;
+  
+
+}
+
+.row-about{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first{
+  margin-top: 3%;
+  padding-top:20px ;
+  padding-bottom:40px ;
+
+}
+
+.second{
+  margin-top: 8%;
+  padding-top:20px ;
+  padding-bottom:40px ;
+  
+}
+
+
+.third{
+  margin-top: 8%;
+
+}
+
+.four{
+  margin-top: 8%;
+
+}
+
+.img{
+    width: 286px;
+    height: 180px;
+}
+
+.container-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+  
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+     box-shadow: 0px 3px 6px #00000029;
+}
+
+.modal-text{
+  text-align: left;
+}
+.icon-tech{
+    margin: auto;
+  font-size: 25px;
+
+}
+
+
+.link{
+  margin: auto;
+}
+
+.contact{
+  margin-top: 100px;
+}
+
+.btn-card{
+  margin-top: 10% ;
+}
+.title-card{
+  margin-bottom: 3%;
+  color: #FF8908 ;
+  
+}
+/*Techno*/
+.fa-html5{
+  color: #ED730E;
+}
+
+.fa-css3-alt{
+  color: #0485E0;
+
+}
+
+.fa-php{
+  color: #678BE0;
+
+}
+
+.fa-js-square{
+  color: #f7df1d;
+  
+}
+
+.fa-bootstrap{
+  color: #563d7c;
+
+}
+.fa-symfony{
+  color: black;
+
+}
+.fa-react{
+  color: #61dbfb;
+
+}
+/*Button*/
+
+  
+  .bubbly-button {
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #FF8908 ;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+
+  }
+
+  
+  
+  .bubbly-button:focus {
+    outline: 0;
+  }
+  .bubbly-button:before, .bubbly-button:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  .bubbly-button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, transparent 20%, #E60932  20%, transparent 30%), radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, transparent 10%, #E60932  15%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  }
+  .bubbly-button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, transparent 10%, #E60932  15%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%), radial-gradient(circle, #E60932  20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  }
+  .bubbly-button:active {
+    transform: scale(0.9);
+    background-color: #fd214a;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+  .bubbly-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+  }
+  .bubbly-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+  }
+  
+  @keyframes topBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  @keyframes bottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  

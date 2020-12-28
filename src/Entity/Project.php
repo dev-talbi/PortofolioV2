@@ -63,6 +63,7 @@ class Project
     public function __toString()
     {
         return $this->name;
+        return $this->img;
     }
 
     public function getId(): ?int

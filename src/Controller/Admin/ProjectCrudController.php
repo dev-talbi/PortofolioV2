@@ -31,5 +31,4 @@ class ProjectCrudController extends AbstractCrudController
             AssociationField::new('techno'),
         ];
     }
-
 }

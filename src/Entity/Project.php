@@ -184,4 +184,8 @@ class Project
 
         return $this;
     }
+
+    public function findAllbyDesc()
+    {
+    }
 }

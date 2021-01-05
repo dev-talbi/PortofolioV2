@@ -142,20 +142,25 @@
 						<h3 class="modal-title">{{ project.name }}</h3>
 					</div>
 					<div class="modal-body">
-						<p class="modal-text">{% autoescape false %} {{ project.description|striptags }} {%
-							endautoescape %}</p>
+						<p class="modal-text">{% autoescape false %}
+						<p class="description">Description :</p>
+						<p class="desc-modal">{{ project.description|striptags }}</p> {%
+						endautoescape %}</p>
 					</div>
 					<div class="modal-footer">
-						{% for i in 0..project.techno|length-1 %}
-						<p class="icon-tech">{{project.techno[i].imgUrl|raw}}</p>
-						{% endfor %}
+						<div class="contenair-tec">
+							<p class="tec">Technologies :</p>
+							{% for i in 0..project.techno|length-1 %}
+							<p class="icon-tech">{{project.techno[i].imgUrl|raw}}</p>
+							{% endfor %}
+						</div>
+
 					</div>
 					<div class="modal-footer">
 						<a class="link" href="{{project.url}}" target="_blank"><i class="fas fa-link"></i> Lien du
 							site</a>
 						<a class="link" href="{{project.repositoryGit}}" target="_blank"><i class="fas fa-link"></i>
 							Lien Github</a>
-						<!--<a href="">Maquette</a>-->
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary read-more" data-dismiss="modal">Fermer</button>

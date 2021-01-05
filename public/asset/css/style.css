@@ -106,6 +106,16 @@
   font-size: 18px;
   
 }
+
+.fa-link{
+  color:#ff7f08 ;
+
+  margin-right: 2%;
+}
+.desc-modal{
+  font-size: 13px;
+  font-style: italic;
+}
 .fa-linkedin{
     color: white;
     font-size: 20px;
@@ -190,14 +200,19 @@
   text-align: left;
 }
 .icon-tech{
-    margin: auto;
+  margin: auto;
   font-size: 25px;
+  display: inline-flex;
+  margin-left: 5%;
+  margin-right: 5%;
 
 }
 
 
 .link{
   margin: auto;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 .contact{
@@ -450,6 +465,25 @@ ul.social-network li {
 
 .social-circle a {
   background-color: #CCD8EA;
+}
+
+.description{
+  margin-bottom: 2%;
+  font-weight: bold;
+  font-size: 20px;
+  color: #FF8908 ;
+}
+
+.modal-footer{
+
+  display: block;
+}
+.tec{
+    margin-bottom: 3%;
+  font-weight: bold;
+  font-size: 20px;
+  color: #FF8908 ;
+
 }
 
 @media screen and (max-width: 500px) {
